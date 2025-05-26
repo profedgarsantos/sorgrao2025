@@ -1,0 +1,15 @@
+{
+  "env": {
+    "REACT_APP_VERSION": "1.0.0"
+  },
+  "build": {
+    "env": {
+      "REACT_APP_DEBUG": "false"
+    }
+  },
+  "rewrites": [{ "source": "/(.*)", "destination": "/index.html" }],
+  "github": {
+    "enabled": true,
+    "silent": true
+  }
+}

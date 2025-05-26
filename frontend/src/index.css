@@ -1,0 +1,65 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
+    "Droid Sans", "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+
+.page-container {
+  padding: 24px;
+}
+
+.page-title {
+  margin-bottom: 24px !important;
+}
+
+.form-container {
+  padding: 24px;
+}
+
+.form-field {
+  margin-bottom: 16px !important;
+}
+
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 16px;
+  margin-top: 24px;
+}
+
+.table-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.dashboard-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 24px;
+  margin-bottom: 24px;
+}
+
+.card-value {
+  font-size: 2.5rem !important;
+  font-weight: 700 !important;
+  color: #1976d2;
+}
+
+.content-wrapper {
+  margin-top: 64px;
+  margin-left: 240px;
+  width: calc(100% - 240px);
+}
+
+@media (max-width: 600px) {
+  .content-wrapper {
+    margin-left: 0;
+    width: 100%;
+  }
+}
