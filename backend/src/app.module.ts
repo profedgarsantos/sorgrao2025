@@ -1,4 +1,4 @@
-import { Module } from "@nestjs/common"
+import { Module } from '@nestjs/common';
 import { ConfigModule, ConfigService } from "@nestjs/config"
 import { TypeOrmModule } from "@nestjs/typeorm"
 import { AuthModule } from "./auth/auth.module"
@@ -35,6 +35,8 @@ import { Funrural } from "./funrurais/entities/funrural.entity";
 import { Comissionado } from "./comissionados/entities/comissionado.entity";
 import { Motorista } from "./motoristas/entities/motorista.entity";
 import { Veiculo } from "./veiculos/entities/veiculo.entity";
+import { ExpedicaoModule } from './expedicaos/expedicaos.module';
+import { Expedicao } from './expedicaos/entities/expedicao.entity';
 
 @Module({
   imports: [
@@ -50,13 +52,14 @@ import { Veiculo } from "./veiculos/entities/veiculo.entity";
       database: "sorgrao",
       ssl: false,
       autoLoadEntities: false,
-      synchronize: true,
-      logging: true,
-      entities: [User, Cidade, Estado, Pais, Grupo, Empresa, Vendedor, Comprador, Demanda, Produto, Fechamento, Transportadora, Oferta, Frete, TipoFrete, Funrural, Comissionado, Motorista, Veiculo],
+      // synchronize: true,
+      // logging: true,
+      entities: [User, Cidade, Estado, Pais, Grupo, Empresa, Vendedor, Comprador, Demanda, Produto, Fechamento, Transportadora, Oferta, Frete, TipoFrete, Funrural, Comissionado, Motorista, Veiculo, Expedicao],
     }),
     AuthModule,
     UsersModule,
     LocalidadesModule,
+    ExpedicaoModule,
     EmpresasModule,
     VendedoresModule,
     ComissionadosModule,
